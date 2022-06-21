@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Frontend Mentor | Creative single page site</title>
+</head>
+<body>
+  <header id="pageHeader">
+    <div class="container">
+      <a href="#" class="logo"><img src="images/logo.svg" alt="Creative"/></a>
+      <nav class="mainMenu menu">
+        <ul>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Service</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#" class="button">Schedule a call</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="branding">
+    <div class="container">
+      <div class="text">
+        <h1>Branding & website design agency</h1>
+        <p>
+          We specialize in visual storytelling by creating cohesive brand and website design 
+          solutions for small businesses, giving lasting impressions to audiences in a digital world.
+        </p>
+        <a href="#" class="link button">Learn more</a>
+      </div>
+    </div>
+  </section>
+  <section id="design">
+    <div class="container">
+      <div class="text">
+        <h2><span class="red">Design</span> is strategic.</h2>
+        <p>
+          A well-crafted design strategy consistently produces desired outcomes and brand awareness. 
+          We are firm believers that success lies in creative collaboration with our clients.
+          <a href="#" class="button_link red">Schedule a call</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="plan">
+    <div class="container">
+      <h2>Our approach for creating a winning brand</h2>
+      <dl>
+        <dt><span>01</span><br /> <h3>Brand strategy</h3></dt>
+        <dd>
+          Brand strategy is critical for long-term success. Outshining competitors and capturing 
+          the target audience are key.
+        </dd>
+        <dt><span>02</span><br />  <h3>Brand design</h3></dt>
+        <dd>
+          Keeping the brand design unique and meaningful helps in communicating the brand’s timeless 
+          value effectively.
+        </dd>
+        <dt><span>03</span><br />  <h3>Web design</h3></dt>
+        <dd>
+          A beautifully crafted website is the best tool for brand awareness, and ultimately results 
+          in increased revenues.
+        </dd>
+      </dl>
+    </div>
+  </section>
+  <aside id="slider">
+    <div class="container">
+      <div class="slide active">
+        <img 
+          src="images/mobile/image-slide-1.jpg" 
+          srcset="images/mobile/image-slide-1.jpg 480w,
+                  images/tablet/image-slide-1.jpg 768w,
+                  images/desktop/image-slide-1.jpg 1024w"
+          sizes=" (max-width: 767px) 480px,
+                  (min-width: 768px) and (max-width: 1023px) 768px,
+                  (min-width: 1024px) 1024px"
+          alt="book" />
+          <strong>Brand naming & guidelines</strong>
+          <div class="slideDetail">
+            <b>Lean Product Roadmap </b>
+            2019 project
+          </div>
+      </div>
+      <div class="slide">
+        <img 
+        src="images/mobile/image-slide-2.jpg" 
+        srcset="images/mobile/image-slide-2.jpg 480w,
+                images/tablet/image-slide-2.jpg 768w,
+                images/desktop/image-slide-2.jpg 1024w"
+        sizes=" (max-width: 767px) 480px,
+                (min-width: 768px) and (max-width: 1023px) 768px,
+                (min-width: 1024px) 1024px"
+        alt="book" />
+          <strong>Brand identity & merchandise</strong>
+          <div class="slideDetail">
+            <b>New Majestic Hotel </b>
+            2018 Project
+          </div>
+      </div>
+      <div class="slide">
+        <img 
+        src="images/mobile/image-slide-3.jpg" 
+        srcset="images/mobile/image-slide-3.jpg 480w,
+                images/tablet/image-slide-3.jpg 768w,
+                images/desktop/image-slide-3.jpg 1024w"
+        sizes=" (max-width: 767px) 480px,
+                (min-width: 768px) and (max-width: 1023px) 768px,
+                (min-width: 1024px) 1024px"
+        alt="book" />
+        <strong>Brand identity & web design</strong>
+        <div class="slideDetail">
+            <b>Crypto Dashboard</b>
+            2016 Project
+          </p>
+        </div>
+      </div>
+      <div class="navArr">
+        <div class="arrLeft">&nbsp;</div>
+        <div class="arrRight">&nbsp;</div>
+      </div>
+    </div>
+  </aside>
+  <footer id="pageFooter">
+    <div class="container">
+      <strong>Let's build something great together.</strong>
+      <a href="#" class="button">Schedule a Call</a>
+    </div>
+  </footer>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

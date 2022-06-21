@@ -1,0 +1,778 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-black: rgb(25,25, 33);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --black-hover: rgb(67, 67, 85);
+    --red: rgb(249, 79, 79);
+    --red-hover: rgb(255, 147, 147);
+}
+
+body {
+    color: var(--black);
+    font: 1.5rem/2.5rem 'Commissioner', sans-serif;
+    margin: 0 auto;
+    width: 100vw;
+}
+
+.button {
+    color: var(--white);
+    background: var(--red);
+    display: block;
+    width: 17.7rem;
+    height: 7.2rem;
+    line-height: 7.2rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.button:hover {
+    background-color: var(--red-hover);
+}
+
+.button_link {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--red);
+    padding-bottom: 1rem;
+    text-decoration: none;
+}
+
+.button_link:hover {
+    color: var(--red-hover);
+    border-color: var(--red-hover);
+}
+
+.red {
+    color: var(--red);
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+a {
+    color: initial;
+}
+
+h2, strong {
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 4rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+/* ---- Header ---- */
+#pageHeader {
+    padding: 3.3rem 2rem 0 2.5rem;
+    height: 11rem;
+    position: relative;
+}
+    .logo {
+        display: block;
+        float: left;
+        height: 3rem;
+        width: 16.1rem;
+    }
+
+    .mainMenu {
+        float: right;
+        cursor: pointer;
+        background: url(../images/mobile/icon-hamburger.svg) no-repeat;
+        margin-top: 0.2rem;
+        padding-top: 2rem;
+        width: 2.4rem;
+        height: 1.8rem;
+    }
+
+    .mainMenu ul {
+        display: none;
+        padding: 2.5rem 2.5rem 0;
+        background-color: var(--bg-black);
+        position: absolute;
+        top: 11rem;
+        left: 25%;
+        z-index: 3;
+        text-align: center;
+    }
+
+    .mainMenu a {
+        display: block;
+        line-height: 3.2rem;
+        margin-bottom: 2.5rem;
+        font-size: 1.7rem;
+        text-decoration: none;
+        color: var(--white);
+        width: 19.9rem;
+    }
+
+    .mainMenu a:hover {
+        font-weight: bold;
+    }
+
+    .mainMenu .button {
+        height: 6.4rem;
+        line-height: 6.4rem;
+    }
+
+    .mainMenu.showMenu {
+        background-image: url(../images/mobile/icon-cross.svg);
+    }
+
+    .mainMenu.showMenu ul {
+        display: block;
+    }
+
+/* ---- Branding ---- */
+#branding {
+    position: relative;
+    padding: 20rem 2.5rem 9.5rem;
+    clear: both;
+}
+    #branding h1 {
+        margin: 5rem 0 1.5rem;
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 4rem;
+        max-width: 32rem;
+    }
+
+    #branding .button {
+        margin-top: 4rem;
+    }
+
+/* ---- Design ---- */
+#design {
+    background-color: var(--bg-black);
+    padding: 27.5rem 2.5rem 6rem;
+    clear: both;
+    color: var(--white);
+    position: relative;
+}
+    #design .button_link {
+        display: inline-block;
+        font-weight: bold;
+        margin: 4rem 20rem 0 0;
+    }
+
+    #design h2:after {
+        display: block;
+        content: "~";
+        color: var(--red);
+        font-size: 12rem;
+        position: absolute;
+        top: 17.3rem;
+        left: 10%;
+        z-index: 2;
+    }
+
+    #design h2 {
+        margin-bottom: 3rem;
+    }
+
+/* ---- Plan ---- */
+#plan {
+    background-color: var(--red);
+    padding: 9.5rem 2.5rem 9rem;
+    color: var(--white);
+}
+    #plan dd {
+        margin-bottom: 4rem;
+    }
+
+    #plan dt span {
+        font-size: 8rem;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.25);
+        margin: 0 0 0rem -1.1rem;
+        display: block;
+    }
+
+
+    #plan h2 {
+        margin-bottom: 6rem;
+    }
+
+    #plan h3 {
+        position: relative;
+        top: -3.2rem;
+        left: 0;
+        margin-bottom: -2.8rem;
+    }
+/* ---- Slider ---- */
+#slider {
+    background-color: var(--bg-black);
+    padding: 0 0 6.5rem;
+    color: var(--white);
+    overflow-x: hidden;
+    min-height: 47.2rem;
+}
+    #slider .container {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    .slide {
+        display: none;
+        position: relative;
+    }
+
+    .slide img {
+        margin: 0 0 6.5rem 0;
+        display: block;
+        width: 100%;
+        box-shadow: inset 0px -28px 25px -20px rgba(0, 0, 0, 1);
+    }
+
+    .slide .slideDetail {
+        position: absolute;
+        top: 64%;
+        right: 8%;
+        text-align: right;
+    }
+
+    .slide b {
+        display: block;
+    }
+
+    .slide strong, .navArr {
+        padding-left: 2.5rem;
+        font-size: 3rem;
+    }
+
+    .arrLeft, .arrRight {
+        display: inline-block;
+        background: url(../images/desktop/icon-arrow-previous.svg) no-repeat;
+        margin: 2rem 1rem 0 0;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+    }
+
+    .arrLeft:hover , .arrRight:hover {
+        opacity: 0.85;
+        transition: all 0.5;
+    }
+
+    .arrRight {
+        background: url(../images/desktop/icon-arrow-next.svg) no-repeat;
+    }
+/* ---- Page footer ---- */
+#pageFooter {
+    padding: 9rem 2.5rem;
+}
+    #pageFooter .button {
+        margin-top: 4.5rem;
+        width: 19.5rem;
+    }
+
+/* ---- Tablet and Desktop ---- */
+@media (min-width: 768px) {
+    body {
+        width: auto;
+    }
+
+    .container {
+        margin: 0 auto;
+        display: flex;
+    }
+
+    /* Header */
+    #pageHeader {
+        background-image: linear-gradient(to right, var(--white) 43%, var(--red) 43%, var(--red) 100% );
+        padding: 3.3rem 2rem 0 2.5rem;
+        height: 17.8rem;
+    }
+        .mainMenu {
+            background: none;
+            margin-top: 0;
+            padding-top: 0;
+            width: auto;
+            height: auto;
+        }
+
+        #pageHeader .button:hover {
+            background-color: var(--black-hover);
+            margin-right: 0;
+        }
+
+        .mainMenu ul {
+            display: block;
+            background: none;
+            margin-top: 0;
+            padding-top: 0;
+            width: auto;
+            height: auto;
+            position: static;
+        }
+
+        .mainMenu ul li {
+            display: inline-block;
+        }
+
+        .mainMenu a {
+            width: auto;
+            min-width: 6.2rem;
+        }
+
+        .mainMenu a:hover {
+            margin-right: -0.1rem;
+        }
+        
+        #design .container {
+            justify-content: flex-end;
+        }
+    
+    #design .button_link {
+        margin-right: 0;
+    }
+
+    #plan {
+        background: none;
+    }
+        #plan .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 767px) {
+    #branding::after {
+        background: url(../images/mobile/image-hero.jpg) no-repeat;
+        width: 100%;
+        height: 20rem;
+        background-size: 100% auto;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #design::after {
+        background: top center url(../images/mobile/image-strategic.jpg) no-repeat;
+        width: 100%;
+        height: 20rem;
+        background-size: 100% auto;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+/* ---- Tablet ---- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 68rem; 
+    }
+
+    /* Header */
+    #pageHeader {
+        padding: 5.4rem 0 0;
+    }
+
+    #pageHeader .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #pageHeader .button {
+        background-color: var(--bg-black);
+    }
+
+    .logo {
+        margin: 1.8rem 3rem 0 0;
+        width: 25rem;
+    }
+
+    .mainMenu {
+        padding-left: 2.5rem;
+    }
+
+    .mainMenu ul {
+        padding: 0;
+    }
+
+    .mainMenu a {
+        padding: 0 1rem;
+        width: auto;
+    }
+
+    /* Branding */
+    #branding {
+        background: top right url(../images/tablet/image-hero.jpg) no-repeat;
+        padding: 8rem 0 0;
+        min-height: 60.6rem;
+    }
+
+
+
+        #branding h1 {
+            margin: 0 0 2.5rem;
+            max-width: 40rem;
+            font-size: 5.6rem;
+            line-height: 5.6rem;
+        }
+
+        #branding .text {
+            width: 40rem;
+        }
+
+    /* ---- Design ---- */
+    #design {
+        background: top left var(--bg-black) url(../images/tablet/image-strategic.jpg) no-repeat;
+        padding: 12rem 0 0;
+        height: 65.8rem;
+    }
+    
+    #design .text {
+        float: right;
+        width: 28rem;
+    }
+        #design h2 {
+            padding-right: 12rem;
+        }
+
+        #design h2::after {
+            top: 13.5rem;
+            left: 44%;
+        }
+
+        #design .button_link {
+            margin-top: 3rem;
+        }
+
+    /* ---- Plan ---- */
+    #plan {
+        background-image: linear-gradient(to right, transparent 42%, var(--red) 42%, var(--red) 100%);
+        margin-top: -12rem;
+        padding: 13.5rem 0 0;
+        min-height: 79.7rem;
+        position: relative;
+    }
+        #plan dl {
+            padding: 0 4.5rem 7.5rem 6rem;
+            width: 37.7rem;
+        }
+
+        #plan h2 {
+            margin: 10.5rem 0 0 -2rem;
+            width: 27rem;
+            color: rgb(0, 0, 0);
+        }
+
+        #plan .container {
+            display: flex;
+        }
+    
+    /* ---- Slider ---- */
+    #slider {
+        position: relative;
+        background: transparent;
+        padding: 0;
+        min-height: 54.6rem
+    }
+        #slider .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: auto;
+        }
+
+        .slide {
+            position: static;
+        }
+
+        #slider img {
+            margin-bottom: 0;
+            width: auto;
+        }
+        
+        .slide strong {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10rem 11rem 17rem 4rem;
+            background-color: var(--bg-black);
+            height: 35.2rem;
+            width: 39rem;
+            display: block;
+        }
+
+        .slide strong::after {
+            display: block;
+            content: "~";
+            color: var(--white);
+            font-size: 12rem;
+            position: absolute;
+            top: 32%;
+            left: 90%;
+        }
+
+        .slide .slideDetail {
+            top: auto;
+            bottom: 4.5rem;
+            right: 4rem;
+            height: 4.5rem;
+            text-align: right;
+        }
+
+        .navArr {
+            position: absolute;
+            top: 18.7rem;
+            left: 1.5rem;
+            z-index: 2;
+        }
+
+    /* Page footer */
+    #pageFooter {
+        padding: 7.5rem 2.5rem;
+        min-height: 25.2rem;
+    }
+        #pageFooter .container {
+            display: flex;
+            align-items: center;
+        }
+
+        #pageFooter .button {
+            margin: 0 0 0 15rem;
+            width: 19.5rem;
+            height: 6.5rem;
+        }
+
+        #pageFooter strong {
+            width: 32rem;
+        }
+}
+ 
+/* ---- Desktop ---- */
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.8rem;
+    }
+    .container {
+        justify-content: space-between;
+        width: 110rem; 
+    }
+
+    .slide strong, h2 {
+        font-size: 5.6rem;
+        line-height: 6.4rem;
+    }
+
+    /* Header */
+    #pageHeader {
+        background-image: linear-gradient(to right, var(--white) 51%, var(--red) 51%, var(--red) 100% );
+        padding: 5.4rem 0 0;
+    }
+
+    #pageHeader .button {
+        background-color: var(--bg-black);
+    }
+
+    .logo {
+        margin: 1.8rem 3rem 0 0;
+        width: 25rem;
+    }
+
+    .mainMenu {
+        margin-right: 6rem;
+        padding-left: 2.5rem;
+        align-self: flex-end;
+    }
+
+    .mainMenu ul {
+        padding: 0;
+    }
+
+    .mainMenu a {
+        padding: 0 1rem;
+        width: auto;
+    }
+
+    /* Branding */
+    #branding {
+        background: top right url(../images/desktop/image-hero.jpg) no-repeat;
+        padding: 8rem 0 0;
+        height: 80rem;
+    }
+
+    #branding h1 {
+        margin: 0 0 2.5rem;
+        max-width: 40rem;
+        font-size: 5.6rem;
+        line-height: 5.6rem;
+    }
+
+    #branding h1, #branding p {
+        width: 40rem;
+    }
+
+    /* ---- Design ---- */
+    #design {
+        background: linear-gradient(to right, transparent 50%,  var(--bg-black) 50%,  var(--bg-black) 100% ),
+                    top left url(../images/desktop/image-strategic.jpg) no-repeat;
+        padding: 12rem 0 0;
+        height: 98.4rem;
+    }        
+        #design .text {
+            width: 44.5rem;
+        }
+
+        #design h2 {
+            width: 24rem;
+        }
+
+        #design h2::after {
+            top: 13.5rem;
+            left: auto;
+            right: 46%;
+            font-size: 17rem;
+        }
+
+        #design .button_link {
+            margin-top: 3rem;
+            display: block;
+            width: 10rem;
+        }
+
+    /* ---- Plan ---- */
+    #plan {
+        background-image: linear-gradient(to right, transparent 37.84%, var(--red) 37.84%, var(--red) 100%);
+        margin-top: -12rem;
+        padding: 13.5rem 0 0;
+        min-height: 79.7rem;
+        position: relative;
+    }
+        #plan dl {
+            padding: 0 4.5rem 7.5rem 2rem;
+            width: 37.7rem;
+        }
+
+        #plan dd {
+            margin-right: -13rem;
+        }
+
+        #plan dt span {
+            margin: 0 0 0rem -5.6rem;
+        }
+
+        #plan h2 {
+            margin: 10.5rem 0 1rem;
+            padding-left: 1.9rem;
+            width: 50rem;
+            color: rgb(0, 0, 0);
+        }
+
+        #plan h3 {
+            top: -3rem;
+        }
+    
+    /* ---- Slider ---- */
+    #slider {
+        position: relative;
+        background: transparent;
+        padding: 0;
+    }
+        #slider .container {
+            width: 100%;
+            min-height: 47.2rem
+        }
+
+        #slider img {
+            float: right;
+            margin: 0 -5rem 0 0;
+        }
+
+        .slide strong {
+            display: block;
+            background-color: var(--bg-black);
+            padding: 15rem 15rem 24rem 16rem;
+            width: 73.5rem;
+            height: 52.8rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .slide p {
+            bottom: 8rem;
+        }
+
+        .slide strong::after {
+            display: block;
+            content: "~";
+            color: var(--white);
+            font-size: 19rem;
+            position: absolute;
+            top: 32%;
+            left: 93%;
+        }
+
+        .navArr {
+            position: absolute;
+            top: 31rem;
+            left: 13rem;
+            z-index: 3;
+        }
+
+        .slideDetail {
+            position: absolute;
+            bottom: 7rem;
+            right: 15.5rem;
+            text-align: right;
+        }
+
+    /* Page footer */
+    #pageFooter {
+        min-height: 25.2rem;
+        position: relative;
+    }
+        #pageFooter .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #pageFooter .button {
+            margin: 4rem 0 0 15rem;
+            width: 19.5rem;
+            height: 6.5rem;
+        }
+
+        #pageFooter strong {
+            font-size: 5.4rem;
+            line-height: 6.4rem;
+            width: 63.5rem;
+        }
+
+        #pageFooter strong:after {
+            display: block;
+            content: "~";
+            color: var(--red);
+            font-size: 17rem;
+            position: absolute;
+            top: 37%;
+            left: -5rem;
+            z-index: 2;
+        }
+}
